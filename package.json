@@ -1,0 +1,12 @@
+{
+  "name": "page2prototype",
+  "private": true,
+  "workspaces": ["server", "web"],
+  "scripts": {
+    "dev": "concurrently \"npm run dev -w server\" \"npm run dev -w web\"",
+    "build": "npm run build -w server && npm run build -w web"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}
